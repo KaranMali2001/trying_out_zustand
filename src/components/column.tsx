@@ -19,7 +19,7 @@ export default function Column({
   const updateTask = useTaskStore((state) => state.updateTask);
   const draggedTask = useTaskStore((state) => state.draggedTask);
   const dragTask = useTaskStore((state) => state.dragTask);
-  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+  const handleDrop = () => {
     console.log("HANDLE DROPPP", draggedTask, status);
     if (!draggedTask) return;
     updateTask(draggedTask, status);
